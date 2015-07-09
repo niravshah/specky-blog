@@ -55,12 +55,11 @@
         </div>
 
         <header>
-            {#NAV BAR#}
-            {%- block nav -%}{%- endblock -%}
+          
         </header>
 
 		{# BODY #}
-		<div id="body">
+		<div id="body" style="background:url('../assets/img/background/low_poly_background.jpg') no-repeat top center;">
 			{# NOTE:
 			   There is no .container wrapping class around body blocks to allow more flexibility in design.
 			   Remember to include it in your templates when you override the intro and content blocks! #}

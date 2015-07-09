@@ -1,6 +1,35 @@
 {% extends "../layouts/default.swig" %}
 
+{%block nav%}
+<nav class="navigation navigation-header">
+    <div class="container">
+        <div class="navigation-brand">
+            <div class="brand-logo">
+                <a href="index.html" class="logo"></a>
+                <span class="sr-only">Specky</span>
+            </div>
+            <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navigation-navbar">
+            <ul class="navigation-bar navigation-bar-left">
+                <li class="active"><a href="#">Blog</a></li>
+            </ul>
+            <ul class="navigation-bar navigation-bar-right">
+                <li><a href="/home">Home</a></li>
+                <li><a href="register.html">Login</a></li>
+                <li class="featured"><a href="register.html">Sign up</a></li>
+            </ul>  
+        </div>
+    </div>
+ </nav>
+{%endblock%}
+
 {% macro showPost(post) %}
+
 	<div class="post" data-ks-editable="editable(user, { list: 'Post', id: post.id })">
 		<h2>
 			<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
@@ -32,19 +61,15 @@
 	</div>
 {% endmacro %}
 
-{% block intro %}
-	<div class="container">
-		{% set title = "Blog" %}
+{% block content %}
+<div style="background: url('assets/img/background/low_poly_background.jpg') no-repeat center center;">
+	<div id="blog" class="container">
+        {% set title = "Blog" %}
 		{% if data.category %}
 			{% set title = data.category.name %}
 		{% endif %}
-		<h1>{{ title }}</h1>
-	</div>
-{% endblock %}
-
-{% block content %}
-	<div class="container">
-		<div class="row">
+        <h1 style="padding-top:80px;color:#FFFFFF">{{ title }}</h1> 
+		<div class="row" style="background:#FFFFFF">
 			<div class="col-sm-8 col-md-9">
 				{% if filters.category and not data.category %}
 					<h3 class="text-muted">Invalid Category.</h3>
@@ -124,4 +149,5 @@
 			{% endif %}
 		</div>
 	</div>
+    </div>
 {% endblock %}
