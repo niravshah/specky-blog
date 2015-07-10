@@ -5,8 +5,8 @@
     <div class="container">
         <div class="navigation-brand">
             <div class="brand-logo">
-                <a href="index.html" class="logo"></a>
-                <span class="sr-only">Specky</span>
+                <img style="height:50px;" src="/assets/img/speck-hdpi.png"/>
+                <span style="vertical-align:middle;">SPECKY</span>
             </div>
             <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
                 <span class="icon-bar"></span>

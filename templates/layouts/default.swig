@@ -26,7 +26,8 @@
         <link rel="stylesheet" href="assets/css/font-lineicons.css" type="text/css" media="all" />
         <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all" />
         <link rel="stylesheet" href="assets/css/toastr.min.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />        
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />  
+        <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 
 		{# This file provides the default styling for the KeystoneJS Content Editor #}
 		{%- if user and user.canAccessKeystone -%}
